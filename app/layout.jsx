@@ -5,7 +5,7 @@ import MainNav from "@/components/MainNav";
 import PageTransition from "@/components/PageTransition";
 import RectangleTransition from "@/components/RectangleTransition";
 import Gradient from "@/components/Gradient";
-import Header from '@/components/header'
+import Header from '@/components/Header'
 
 const someTypeMono = Sometype_Mono({
   variable: "--font-family-primary",

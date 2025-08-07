@@ -1,0 +1,37 @@
+const journey = [
+    {
+        years:"May 2025 - Present",
+        role:"Web Developer Intern",
+        institution:"CyberFort Tech"
+    },
+    {
+        years:"May 2025 - Present",
+        role:"AI Intern",
+        institution:"CyberFort Tech"
+    },
+    {
+        years:"Apr 2025 - Present",
+        role:"Co Founder",
+        institution:"Nova Coders"
+    },
+    {
+        years:"Aug 2022 - Present",
+        role:"Student",
+        institution:"Vision Institute of Technology"
+    },
+    {
+        years:"Mar 2025 - Present",
+        role:"Campus Ambassador",
+        institution:"Ddark Innovations"
+    },
+    {
+        years:"Apr 2025 - July 2025",
+        role:"Client Success Intern",
+        institution:"EduBuddy"
+    },
+    {
+        years:"Nov 2024 - Dec 2024",
+        role:"Student Ambassador",
+        institution:"Letsupgrade"
+    }
+]

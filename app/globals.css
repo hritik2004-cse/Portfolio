@@ -1,26 +1,84 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1130px;
+  --breakpoint-2xl: 1520px;
+
+  /* Colors */
+  --color-primary: #0d091a;
+  --color-secondary: #140e25;
+  --color-tertiary: #201837;
+  --color-tertiary-hover: #271f40;
+  --color-accent: #5810ff;
+  --color-accent-hover: #4a0bde;
+  --color-background: #0d091a;
+  --color-foreground: #ffffff;
+  --color-muted-foreground: #a1a1aa;
+  
+  /* Fonts */
+  --font-family-primary: 'Sometype Mono', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Apply base styles to the body element */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-primary);
+  color: white;
+  line-height: 1.625;
+  font-family: var(--font-family-primary);
+}
+
+/* 4. Define reusable component classes using @apply.
+*/
+
+/* Typography */
+.h1 {
+  @apply text-[40px] font-extrabold leading-[1] tracking-tight md:text-[52px] xl:text-[56px];
+}
+
+.h2 {
+  @apply text-[32px] font-medium leading-[1.15] tracking-tight md:text-[36px] xl:text-[38px];
+}
+
+.h3 {
+  @apply text-[28px] font-medium leading-[1.2] md:text-[30px] xl:text-[32px];
+}
+
+.h4 {
+  @apply text-[22px] font-medium leading-snug md:text-[26px];
+}
+
+/* Layout */
+.container {
+  @apply mx-auto w-full max-w-[var(--breakpoint-xl)] px-4;
+}
+
+/* Buttons */
+.btn {
+  @apply flex h-[56px] cursor-pointer items-center justify-center rounded-full font-medium transition-all;
+}
+
+.btn-sm {
+  @apply min-w-[168px] px-5 text-[15px] font-semibold;
+}
+
+.btn-lg {
+  @apply min-w-[200px] px-6 text-base;
+}
+
+/* Button Color Variants */
+.btn-accent {
+  @apply bg-accent text-white hover:bg-accent-hover;
+}
+
+.btn-tertiary {
+  @apply bg-tertiary text-white hover:bg-tertiary-hover;
+}
+
+.btn-white {
+  @apply bg-white text-primary hover:bg-white/90;
 }
